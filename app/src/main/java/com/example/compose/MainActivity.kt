@@ -13,6 +13,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.compose.ui.theme.ComposeTheme
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.material3.Button
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +35,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    /*
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
+
+                     */
+                    Birth(m = Modifier.padding(innerPadding))
+
                     )
                 }
             }
@@ -30,18 +50,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    ComposeTheme {
-        Greeting("Android")
-    }
+fun Birth(m: Modifier){
+
 }
